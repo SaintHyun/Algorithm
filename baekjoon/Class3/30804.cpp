@@ -18,19 +18,19 @@ int main()
     {
         cin >> fruit[i];
     }
-    for(right = 1; right <= n; right++)
+    for (right = 1; right <= n; right++)
     {
-        used[fruit[right]]+=1;
-        if(used[fruit[right]] == 1)
+        used[fruit[right]] += 1;
+        if (used[fruit[right]] == 1)
             cnt++;
-        while(cnt > 2)
+        while (cnt > 2)
         {
             used[fruit[left]] -= 1;
-            if(used[fruit[left]] == 0) cnt--;
+            if (used[fruit[left]] == 0)
+                cnt--;
             left++;
         }
         ans = max(ans, right - left + 1);
-        
     }
     cout << ans << "\n";
-}   
+}

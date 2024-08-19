@@ -8,8 +8,8 @@ fi
 filename=$(basename -- "$1")
 filename="${filename%.*}"
 
-echo "g++ -Wall -std=gnu++17 "$1" -o "build/$filename.out""
-g++ -Wall -std=gnu++17 "$1" -o "build/$filename.out"
+echo "g++ -std=gnu++17 "$1" -o "build/$filename.out""
+g++ -std=gnu++17 "$1" -o "build/$filename.out"
 
 if [ $? -eq 0 ]; then
   echo "Running Program"

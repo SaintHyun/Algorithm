@@ -22,8 +22,10 @@ int main()
     cin >> t >> p;
     for (i = 0; i < 6; i++)
     {
-        if(size[i] % t != 0) anst += size[i] / t + 1;
-        else anst += size[i] / t;
+        if (size[i] % t != 0)
+            anst += size[i] / t + 1;
+        else
+            anst += size[i] / t;
     }
     ansp1 = n / p;
     ansp2 = n % p;

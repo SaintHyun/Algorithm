@@ -3,10 +3,12 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 
-bool compare(pair<int,int>a, pair<int,int>b)
+bool compare(pair<int, int> a, pair<int, int> b)
 {
-    if(a.first > b.first) return true;
-    if(a.first == b.first) return a.second<b.second;
+    if (a.first > b.first)
+        return true;
+    if (a.first == b.first)
+        return a.second < b.second;
     return false;
 }
 
@@ -22,16 +24,16 @@ int main()
     int n, m;
     vector<pair<int, int>> A, B;
     vector<int> ans;
-    int i,j, curidxA=-1, curidxB=-1;
+    int i, j, curidxA = -1, curidxB = -1;
     cin >> n;
-    for(i=0; i<n; i++)
+    for (i = 0; i < n; i++)
     {
         int tmp;
         cin >> tmp;
         A.push_back(make_pair(tmp, i));
     }
     cin >> m;
-    for(j=0; j<m; j++)
+    for (j = 0; j < m; j++)
     {
         int tmp;
         cin >> tmp;
@@ -40,13 +42,13 @@ int main()
     sort(A.begin(), A.end(), compare);
     sort(B.begin(), B.end(), compare);
 
-    for(i=0; i<n; i++)
+    for (i = 0; i < n; i++)
     {
-        for(j=0; j<m; j++)
+        for (j = 0; j < m; j++)
         {
-            if(B[j].first == A[i].first)
+            if (B[j].first == A[i].first)
             {
-                if(curidxA < A[i].second && curidxB < B[j].second)
+                if (curidxA < A[i].second && curidxB < B[j].second)
                 {
                     curidxA = A[i].second;
                     curidxB = B[j].second;
@@ -57,7 +59,7 @@ int main()
         }
     }
     cout << ans.size() << "\n";
-    for(i=0; i<ans.size(); i++)
+    for (i = 0; i < ans.size(); i++)
     {
         cout << ans[i] << " ";
     }
