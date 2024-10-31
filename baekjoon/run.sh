@@ -13,7 +13,9 @@ g++ -Wall -std=gnu++17 "$1" -o "build/$filename.out"
 
 if [ $? -eq 0 ]; then
   echo "Running Program"
+  echo ""
   ./"build/$filename.out"
+  echo ""
   echo "Program is terminated"
 else
   echo "Compile Error"
