@@ -12,6 +12,8 @@
         "string_view": "cpp",
         "ranges": "cpp",
         "span": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "cstdbool": "cpp",
+        "*.tcc": "cpp"
     }
 }
