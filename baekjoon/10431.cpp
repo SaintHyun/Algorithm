@@ -15,21 +15,22 @@ int main()
     int p, t, i, j, ans;
     int height[21];
     cin >> p;
-    
-    while(p--)
+
+    while (p--)
     {
         cin >> t;
         ans = 0;
-        for(i=1; i<=20; i++)
+        for (i = 1; i <= 20; i++)
         {
             cin >> height[i];
         }
 
-        for(i=1; i<=19; i++)
+        for (i = 1; i <= 19; i++)
         {
-            for(j=i+1; j<=20; j++)
+            for (j = i + 1; j <= 20; j++)
             {
-                if(height[i] > height[j]) ans++;
+                if (height[i] > height[j])
+                    ans++;
             }
         }
         cout << t << " " << ans << "\n";
